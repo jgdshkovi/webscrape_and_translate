@@ -1,0 +1,53 @@
+wget -r -l 1 -p --convert-links --user-agent="Mozilla" https://www.classcentral.com/
+
+get the text using the nltk Library
+then find the xpaths of all the text using beautiful soup 
+translate and replace, done..
+
+
+also look into the scrapy library.
+
+
+find all the links using the find_all("a") of bs4 library to find the <a> tags and take the links into a list:
+
+now iterate through the list and convert the pages using the same translation logic which was used for the main page.
+and (IMP) save the file as 
+"xyz<index>"
+ using the index of the list and
+ (IMP) chanage the <a>'s href's of the corresponding links using the same name.
+
+
+ ----------------------------------------------------------------
+Also I think the issue why some text is not translated, it may be due to the fact that 
+we may be excluding some scenarios where the text is dependent on the attributes of the tag 
+which we have excluded using the following code:
+tag.name not in ['script', 'style']
+
+----------------------------------------------------------------
+https://ccweb.imgix.net/https%3A%2F%2Fwww.classcentral.com%2Fimages%2Fillustrations%2Flearning-illustration-black-history-month-01.png?auto=format&h=650&ixlib=php-3.3.1&s=8403b01dba51afcef1e0f1dce788572d
+https://ccweb.imgix.net/https%3A%2F%2Fwww.classcentral.com%2Fimages%2Fillustrations%2Flearning-illustration-black-history-month-01.png?auto=format&h=650&ixlib=php-3.3.1&s=ab1fec484ae1d53fb9750018152aa0d9
+https://ccweb.imgix.net/https%3A%2F%2Fwww.classcentral.com%2Fimages%2Fillustrations%2Flearning-illustration-black-history-month-01.png?auto=format&blur=200&h=650&ixlib=php-3.3.1&px=16&s=ab1fec484ae1d53fb9750018152aa0d9
+
+
+
+in modified_main_soup.html remove the clear_subheadings() 
+line 139 from nav_main.
+
+
+https://files.000webhost.com/
+uid: jgdshkovi-abc
+pwd: abcabcabc
+
+
+
+
+
+
+ GPT35
+  Certainly, here are your updated resume bullet points that include the use of the `requests` library for web scraping:
+
+- Employed the `requests` and BeautifulSoup (bs4) Python libraries to automate data extraction from provided URLs.
+- Conducted comprehensive website scraping with customizable parameters such as element types and scraping depth, utilizing the `requests` library for HTTP requests and BeautifulSoup for parsing the HTML content.
+- Efficiently organized and managed the extracted data.
+- Implemented a robust website scraping solution with customizable parameters, including element types and scraping depth, to systematically organize and efficiently manage the extracted data.
+- Demonstrated proficiency in translation by utilizing the Google Translate API to convert an entire website into Hindi, integrating it seamlessly with the web scraping process.
